@@ -1,4 +1,4 @@
-{% set version = '1.0.7' %}
+{% set version = "1.0.8" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pre_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pre/pre_{{ version }}.tar.gz
-  sha256: 6181ee561790398d90f4543f635115dfb8a85867061237edf4189a65a177139c
+  sha256: d73182bc457cbcf9859fd5a2c49116d65255da832eb19b750b5e748b957dae43
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -53,12 +53,8 @@ test:
 about:
   home: https://github.com/marjoleinF/pre
   license: GPL-2.0-only and GPL-3.0-only
-  summary: Derives prediction rule ensembles (PREs). Largely follows the procedure for deriving
-    PREs as described in Friedman & Popescu (2008; <DOI:10.1214/07-AOAS148>), with adjustments
-    and improvements. The main function pre() derives prediction rule ensembles consisting
-    of rules and/or linear terms for continuous, binary, count, multinomial, and multivariate
-    continuous responses. Function gpe() derives generalized prediction ensembles, consisting
-    of rules, hinge and linear functions of the predictor variables.
+  summary: Derives prediction rule ensembles (PREs). Largely follows the procedure for deriving PREs as described in Friedman & Popescu (2008; <DOI:10.1214/07-AOAS148>), with adjustments and improvements. The main function pre() derives prediction rule ensembles consisting of rules and/or linear terms for continuous, binary,
+    count, multinomial, and multivariate continuous responses. Function gpe() derives generalized prediction ensembles, consisting of rules, hinge and linear functions of the predictor variables.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
